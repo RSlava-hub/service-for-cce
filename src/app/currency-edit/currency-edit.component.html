@@ -1,0 +1,37 @@
+<div>
+  <button class="btn-upd" (click)="showData()">Обновить</button>
+  <div *ngFor="let department of items.json.departments; let dep_id = index">
+    <div *ngFor="let item of department.currencies;  let curr_id = index">
+      <div class="title">
+        <img src="assets/Pic/{{item.code}}.png" alt="">
+        <p>{{item.code}}</p>
+      </div>
+      <div class="currency">
+        <div class="buy">
+          <span>Покупка</span>
+          <span class="svalue">Диапозон</span>
+          <div *ngFor="let buy of item.buy; let buy_id = index">
+            <input type="text" readonly="readonly" value="{{buy.value}}" [attr.data-department]="dep_id"
+              [attr.data-currency]="curr_id" [attr.data-buy]="buy_id" [attr.data-type]="'value'">
+            <input type="text" value="{{buy.text}}" [attr.data-department]="dep_id" [attr.data-currency]="curr_id"
+              [attr.data-buy]="buy_id" [attr.data-type]="'text'">
+          </div>
+        </div>
+        <div class="sell">
+          <span>Продажа</span>
+          <span class="svalue">Диапозон</span>
+          <div *ngFor="let sell of item.sell; let sell_id = index">
+            <input type="text" readonly="readonly" value="{{sell.value}}" [attr.data-department]="dep_id"
+              [attr.data-currency]="curr_id" [attr.data-sell]="sell_id" [attr.data-type]="'value'">
+            <input type="text" value="{{sell.text}}" [attr.data-department]="dep_id" [attr.data-currency]="curr_id"
+              [attr.data-sell]="sell_id" [attr.data-type]="'text'">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="successblock">
+    <input type="datetime-local" class="date">
+    <button class="btn-success" (click)="postData()">Применить</button>
+  </div>
+</div>

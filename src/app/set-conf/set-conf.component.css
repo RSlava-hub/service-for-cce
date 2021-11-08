@@ -1,0 +1,17 @@
+
+.container-for-conf{
+    display: flex;
+    flex-direction: column;
+}
+.value{
+    margin-left: 55px;
+}
+.buy{
+    margin-left: 95px;
+}
+.sell{
+    margin-left: 95px;
+}
+input{
+    margin-left: 10px;
+}

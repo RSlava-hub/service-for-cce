@@ -1,0 +1,23 @@
+<div>
+  <button class="btn-upd" (click)="showData()">Обновить</button>
+  <div *ngFor="let item of items.json.departments[0].currencies">
+    <div class="title">
+      <img src="assets/Pic/{{item.code}}.png" alt="">
+      <span>{{item.code}}</span>
+    </div>
+    <div class="currency">
+      <div class="buy">
+        <div *ngFor="let buys of item.buy">
+          <p>Диапозон:{{buys.value}}</p>
+          <p>Покупка:{{buys.text}}</p>
+        </div>
+      </div>
+      <div class="sell">
+        <div *ngFor="let sells of item.sell">
+          <p>Диапозон:{{sells.value}}</p>
+          <p>Продажа:{{sells.text}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

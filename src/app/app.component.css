@@ -1,0 +1,23 @@
+h1, h2{
+    margin-bottom: 10px;
+    text-align: center;
+}
+nav{
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    padding: 25px;
+    margin-bottom: 25px;
+}
+a{
+    margin-left: 10px;
+    text-decoration: none;
+    color: black;
+    padding: 5px 5px 5px 5px;
+    border: 1px solid black;
+    background-color: #d7d9d8;
+}
+.btn-cce{
+    margin-right: 5px;
+    cursor: pointer;
+}

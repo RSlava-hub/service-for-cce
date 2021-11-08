@@ -1,0 +1,15 @@
+<h1>Приложение для взаимодействия с CCE</h1>
+<h2>Рябов В.А.</h2>
+<button class="btn-cce" (click)="getCurrencyCourse()">Выбрать</button>
+<select class="select-cce">
+    <option>/currency-courses-editor</option>
+    <option>/currency-courses-editor1</option>
+    <option>/currency-courses-editor2</option>
+    <option>/currency-courses-editor3</option>
+</select>
+<nav>
+    <a routerLink="/main">Главная страница</a>
+    <a routerLink="/curedit">Обновление курсов</a>
+    <a routerLink="/setconf">Формирование конфиг-файла</a>
+</nav>
+<router-outlet></router-outlet>
